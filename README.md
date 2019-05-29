@@ -8,4 +8,4 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Policy invariance under reward transformations: Theory and application to reward shaping. [paper](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwj0_aWGkqnhAhUMsJ4KHQa0AhIQFjAAegQIARAC&url=https%3A%2F%2Fpeople.eecs.berkeley.edu%2F~pabbeel%2Fcs287-fa09%2Freadings%2FNgHaradaRussell-shaping-ICML1999.pdf&usg=AOvVaw0_4_YRBOAhowRqKUZlLlK6)
 
 ### 2019 May:
-- Data-Efficient Hierarchical Reinforcement Learning [paper](https://arxiv.org/abs/1805.08296)
+- Data-Efficient Hierarchical Reinforcement Learning [paper](https://arxiv.org/abs/1805.08296) [note](/May-2019/Data-Efficient%20Hierarchical%20Reinforcement%20Learning.md)
