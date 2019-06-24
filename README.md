@@ -9,3 +9,6 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 
 ### 2019 May:
 - Data-Efficient Hierarchical Reinforcement Learning [paper](https://arxiv.org/abs/1805.08296) [note](/May-2019/Data-Efficient%20Hierarchical%20Reinforcement%20Learning.md)
+
+### 2019 June:
+- ICML2015 - Universal Value Function Approximators
