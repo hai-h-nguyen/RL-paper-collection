@@ -12,3 +12,6 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 
 ### 2019 June:
 - ICML2015 - Universal Value Function Approximators
+
+### 2019 July:
+- Deep Reinforcement Learning that matters
