@@ -15,3 +15,6 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 
 ### 2019 July:
 - Deep Reinforcement Learning that matters
+
+### 2019 Sept:
+- Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning
