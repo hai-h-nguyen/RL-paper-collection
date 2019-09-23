@@ -1,3 +1,29 @@
-Paper: 
+<1999>
 Between MDPs and semi-MDPs:
 A framework for temporal abstraction in reinforcement learning <RichardS.Suttona, DoinaPrecupb, SatinderSingh>
+
+Introduce a mathematical framework of options: closed-loop policies for taking action over a period of time. Primitive actions
+actually can be seen as a special case for options. A set of options over a MDP will create a semi-Markov decision process. The
+theory of SMDP also provides the foundation for the theory of options. 
+
+(1) They show that the results of planning with options can be used uring execution to interrupt actions and thereby perform even
+better than planned
+
+(2) Intra-option methods: Able to learn about option from fragments of its execution
+
+(3) A notion of subgoal that can be used to improve the options themselves
+
+Takeaway
+Temporal abstraction.  There is no notion of a course of action persisiting over a variable period of time. Conventional MDP methods
+are unable to take advantage of the simplicities and efficiencies available high-levels of temporal abstraction.
+
+semi-Markov decision process [5] [41] [52]
+Actions in SMDPs take variable amounts of time. SMDP is mimited as the emporally extended actions are indivisible and unknown units.
+Options will no longer be black boxes
+
+Options consist of three components: a policy, a termination condition, and an initiation set. If the option is taken, then actions
+are selected until the option terminates stochastically. After that, the agent can select another option. In episodic task, termination
+of an episode also termintes the current option. There might be "timeout" for options as well, to terminate after some times without
+reaching a certain state. This is not a Markov option as the decision is dependent on all prior events since the option was initiated.
+-> called semi-Markov options. A termination condition therefore is a map from history of states to [0, 1]. It is also interesting
+that options can select other options making hiearchical structures. 
