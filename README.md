@@ -18,3 +18,7 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 
 ### 2019 Sept:
 - Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning
+- Pixel-Attentive Policy Gradient for Multi-Fingered Grasping in Cluttered Scences
+- kPAM: KeyPoint Affordances for Category-Level Robotic Manipulation
+- MAT: Multi-fingered adaptive tactile grasping via deep reinforcement learning
+- Self-supervised correspondence in visuomotor policy learning
