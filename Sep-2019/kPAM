@@ -1,0 +1,21 @@
+A framework for defining and accomplishing category level manipulation task. Key distinction is 
+to use semantic 3D keypoints for object representation instead of traditional poses. 
+3 components:
+
+Instance Segmentation and Keypoint Detection: 
+From RGBD images, using integral network for 3D keypoint detection. For each keypoint, the network will produce a probability heatmap and a depth prediction map as the raw outputs. Then 2D images and the depth value are extracted using the integral operation. 3D keypoints are retrieved using the calibrated camera intrinsics, to the world using extrinsics. Training: Given a scene containing the objects -> 3D reconstruction -> manually label the keypoints on 3D model -> project to image plane. Achieve cm accuracy with over 100,000 labeled images. Required MaskR-CNN as the input. A pose representation cannot capture large intra-category variations. They argue that 3D keypoint can generalize to novel instances of the category but not with pose representation.
+
+kPAM Optimization: The optimization used to find the desired robot action given some constraints e.g. L2 distance bost between the transformed keypoint with its nominal target location, half-space constraint on the keypoint, point-to-plane distance cost, robot action be in the robot's space and avoid collisions.
+
+Robot grasping: They have their own grasp planner which uses the detected keypoints and local dense geometric information from pointcloud to score grasps. Using the detected keypoints to reduce the search space of grasps.
+
+[21] Integral human pose regression.
+
+Keypoint Target and Pose Target: The keypoint representation might ignores many task-irrelevant geometric details. Pose target is object-specific and defining a target pose at the category level can lead to physically infeasible manipulation. 
+
+Tasks for experiment: Put shoes on a rack: 98%, error due to wrong keypoint detection or actions move the shoes; Put mugs upright: 97% when mugs are upright, 88% for horizontal position; hang the mugs on the rack by their handles: 100% for normal sized mugs, 50% for unseen kid sized mugs
+
+Limits and future work:
+Still need human annotation, although autonomous 3D reconstruction. Plan to train on synthetic data.
+Representing the robot action with rigid transformation only work for rigid objects, not deformable ones. It also fails with dexterious manipulation actions on rigid objects. Could combine learning-based and model-based approach with keypoint representation.
+

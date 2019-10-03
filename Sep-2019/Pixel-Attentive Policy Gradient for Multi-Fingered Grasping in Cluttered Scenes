@@ -1,0 +1,21 @@
+Model the task of multi-fingered grasping as a inifinite-horizon MDP. Three actions: 1, zoom into a local region of the scene 2, terminate the episode and attempts a grasp based on the current zoom level. They use clipped PPO to train.
+
+Inputs are depth images. 224x224 seems to be very common choice for image size. Depth image and the current zoom-level are fed into a four-branch CNN. This has four branches: b_position, b_attention, b_rpy (roll, pitch, yaw), b_fingers. The outputs are 10 2D maps: position + zoom + scale, roll+pitch+yaw, spread+finger1+finger2+finger3. 
+
+If the decision is to zoom, the original depth map is cropped according to the sample action, resized and fed back into the CNN for the next step, forming "attention". 
+
+The position map: encode the robot's end-effector position during grasping and the center location of the robot's region of attention during zooming. This is based on an observation that effective grasp positions can be associated with a point in the scene's point cloud data. If the robot decides to grasp, this point will be converted back to (XYZ) Cartesian location so that the end-effector can move there and attempt grasps.
+
+The attention map: Make two actions: zoom or start grasping; and the level of zooming (if it wants to zoom). This is based on in cluttered environment, zooming can help robots to avoid other irrelevant objects.
+
+The RPY orientation maps: Define the end-effector orientation. They choose different activation functions based on the range of each angle. 
+
+The finger joint maps: Determine the pre-grasp finger joint positions before closing all finger with the same joint velocity.
+
+close robot fingers until maximum effort:
+
+The network structure is inspired by Feature Pyramid Networks. Because there might be a lot of zooming, the CNN needs to have strong scale invariance.
+
+Main sim-to-real gaps for vision-based learning come from texture (RGB) info, rather than depth info.
+
+Ablation study shows the importance of domain randomization and attention mechanism. Failure cases are when the objects are tightly cluttered leaving no space for the robot to grasp.
