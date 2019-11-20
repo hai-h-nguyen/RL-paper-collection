@@ -1,0 +1,11 @@
+The paper deal with a novel task: moving a collection of unknown number of homogeneous objects into a desired area on a table top.
+They used a Baxter robot. The core contribution is to learn a representation that can capture multi-object information. They used 
+GNN to include relational info between each objects. They also use attention mechanism from NLP. The loss they contructed is 
+also worth mentioned. Because all the objects are similar, they used the loss of correctly predict the area with high probability 
+of objects instead of spitting out numerical coordinates of objects. It makes sense because these objects are the same thefore
+it would be difficult to know which is the specific object that corresponds to the predicted coordinates. The loss also includes 
+dynamic loss (forward and inverse kinematic loss), however in their experimental results, these lossess make no significant difference
+in learning the task. They used SAC to train the agent after learning the representation. In order to transfer the learned policy to 
+the real robot, they use domain randomization. They also use HER to assist learning with sparse rewards. They follow the asymmetric actor
+critic approach. They feed the representation in images to the actor while the representations learned using true coordinates of objects
+(taken from simulators) to calculate the goal and to feed the value network.

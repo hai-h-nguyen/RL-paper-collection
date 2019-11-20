@@ -22,3 +22,7 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - kPAM: KeyPoint Affordances for Category-Level Robotic Manipulation
 - MAT: Multi-fingered adaptive tactile grasping via deep reinforcement learning
 - Self-supervised correspondence in visuomotor policy learning
+
+### 2019 Nov:
+- Learning to Manipulate Object Collections Using Grounded State Representations (CoRL 2019) [note](/Nov-2019/1.md)
+- Teacher algorithms for curriculum learning of Deep RL in continuously parameterized environments (CoRL 2019) [note](/Nov-2019/2.md)

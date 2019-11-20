@@ -1,0 +1,5 @@
+I did not go deep into the paper. However, the general idea is learn how to give a curriculum so that the student (an agent
+learning to walk over obstacles) can master as many task as possible (depending on the capability of the agent as well).
+They used the absolute delta between performance of the agent on tasks to decide which tasks will be included next. They used
+GMM to sample tasks. Tasks here meaning that the same task walking but with different parameters of obstacles (such as heights, 
+shape, or distance between obstacles).
