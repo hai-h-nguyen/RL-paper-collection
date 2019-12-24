@@ -28,4 +28,4 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Teacher algorithms for curriculum learning of Deep RL in continuously parameterized environments (CoRL 2019) [note](/Nov-2019/2)
 
 ### 2019 Dec:
-- Playing FPS Games with DRL [note](/Dec-2019/1)
+- Playing FPS Games with DRL [note](Dec-2019/1.md)
