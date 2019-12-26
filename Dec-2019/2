@@ -1,0 +1,12 @@
+Abstract: Propose an algorithm that learn general-pupose skills by combining unsupervised representation learning and RL of
+goal-conditioned policies. The agent practice with imagined goals and try to achieve them. Learn a visual representation with
+three purposes: sampling goals for self-supervised practice, provide a structured transformation of raw sensory inputs, and 
+computing a rewad signal for goal reaching. Proposed a goal relabeling scheme. Off-policy, raw images.
+
+Introduction: Limits of RL that learn specific tasks with manually designed reward functions. The purpose is to mimic humans as 
+we often set abstract goals (already present from early infancy). The paper design an RL framework that learns representations 
+of raw sensory inputs and policies an arbitrary goals under the representation by self-practicing with imagine goals. Pixel-wise
+Euclidean distance is ineffective as it does not represent the meaningful difference between states. 
+
+A VAE is trained with three purposes: to sample goals to train the policy, to map images into the latent space, and to calculate
+the distance in the latent space. 
