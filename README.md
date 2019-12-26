@@ -29,3 +29,4 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 
 ### 2019 Dec:
 - Playing FPS Games with DRL [note](Dec-2019/1.md)
+- Visual Reinforcement Learning with Imagined Goals [note](Dec-2019/2)
