@@ -10,3 +10,31 @@ Euclidean distance is ineffective as it does not represent the meaningful differ
 
 A VAE is trained with three purposes: to sample goals to train the policy, to map images into the latent space, and to calculate
 the distance in the latent space. 
+
+Goal-conditioned RL: Standard model-free RL learns a single task. If the object is to learn a policy that can accomplish a 
+variety of tasks, we can construct a goal-contionted policy and reward, and optimize the expected return with respect to a goal
+distribution. They estimate goal-conditioned Q-functions by learn a Q(s,a,g) which estimate the expected return for the goal g
+starting from state s and taking action a. The Bellman error Q(s,a,g) - (r + max Q(s',a',g)) from tuple (s,a,s',g,r) using
+actor-critic algorithms. 
+
+/beta-VAE: beta is the weighting between the two losses. 
+
+The first step is to train a VAE. A random policy is used to collect state observations. After that, they use the mean of the 
+encoder as the state encoding z = e(s). goal-conditioned Q-function Q(z, a, z_g) and the policy \pi(z, z_g, \theta). They use
+TD3 to train. 
+
+As the policy improves, it may visits parts of the state space that the VAE was never trained on. To solve this, 
+they use a Dagger-like approach by fine-tuning the VAE using both randomly generated state observations and the state observations
+collected during exploration. 
+
+To calculate the reward, they use the negative Mahalanobis distance in the latent space. r(s,g) = - || z - z_g||_A. With A 
+is a matrix that weights different dimensions in the latent space. If A is set to be the precision matrix of the encoder, then
+r(s,g) ~ \sqrt(log e_\phi (z_g |s). That means minimizing this squared distance is equivalent to rewarding reaching states that
+maximize the probability of the latent goal z_g. In practice, they use A = I that corresponds to Euclidean distance. The normal
+autoencoder would not have this property since distances are not trained to have any probabilistic meaning. 
+
+Improving sample efficiency with latent goal relabeling: They can turn any tuple (s,a,s') to a valid transition (s,a,s',g,r)
+by generating a goal g and calculate the reward r(s,a,s',g). For image-based tasks, it would require to generate goal images.
+They can generate latent goals z_g by sampling from the VAE prior p(z). In practice, they need to fit a diagonal Gaussian
+to the latent encoding and use the fitted prior instead. It is reasonable as the latent distribution would not exactly match
+the prior. This approach is similar to HER. However, HER is limited to sampling goals seen along the trajectory. 
