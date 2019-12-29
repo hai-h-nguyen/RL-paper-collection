@@ -1,3 +1,10 @@
+[Future work] 1. Combine with exploration and intrinsic motivation. Can modify the goal generation procedure to be more information
+seeking or uncertainty aware. 2. As the method operates from images, a single policy can solve a large diverse set of visual
+tasks even if they have different underlying state representations. Can combine with multi-task learning or meta-learning. 3.
+Goal specified by demonstrations or more abstract representations such as language.
+
+Site with code: https://sites.google.com/site/visualrlwithimaginedgoals/
+
 Abstract: Propose an algorithm that learn general-pupose skills by combining unsupervised representation learning and RL of
 goal-conditioned policies. The agent practice with imagined goals and try to achieve them. Learn a visual representation with
 three purposes: sampling goals for self-supervised practice, provide a structured transformation of raw sensory inputs, and 
@@ -38,3 +45,16 @@ by generating a goal g and calculate the reward r(s,a,s',g). For image-based tas
 They can generate latent goals z_g by sampling from the VAE prior p(z). In practice, they need to fit a diagonal Gaussian
 to the latent encoding and use the fitted prior instead. It is reasonable as the latent distribution would not exactly match
 the prior. This approach is similar to HER. However, HER is limited to sampling goals seen along the trajectory. 
+
+Automated Goal-Generation for Exploration: Goals can be sampled easily from the learned distribution over latent space. 
+z_g ~ \pi (z, z_g).
+
+Experiments: They compared with other approach: DSAE (deep spatial autoencoder), HER, Oracle (RL with direct access to state
+information for observations and rewards). To make previous work comparable, they need to perform some modifications. 
+
+Relabeling strategy comparison: Future: relabeling the goal for a transition by sampling uniformly from future states in the
+trajectory (HER approach), VAE: sampling goals from VAE only, RIG: 0.5 0.5 for both. 
+
+Learning with variable number of objects: Learning directly from pixels has the advantage because it can represent combinatorial
+structure in the environment. This is difficult to encode into a fixed-length state vector even if we have full access to 
+the environment. 
