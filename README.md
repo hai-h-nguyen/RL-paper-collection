@@ -31,3 +31,6 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Playing FPS Games with DRL [note](Dec-2019/1.md)
 - Visual Reinforcement Learning with Imagined Goals [note](Dec-2019/2)
 - Deep Recurrent Q-Learning for POMDPs [note](Dec-2019/3)
+
+### 2020 Jan:
+- Deep Q-learning from Demonstrations [note](Jan-2020/1)
