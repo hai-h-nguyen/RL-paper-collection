@@ -35,3 +35,4 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 ### 2020 Jan:
 - Deep Q-learning from Demonstrations [note](Jan-2020/1.md)
 - Deep Reinforcement Learning with Double Q-Learning [note](Jan-2020/2.md)
+- Dueling Network Architectures for Deep Reinforcement Learning [note](Jan-2020/3.md)
