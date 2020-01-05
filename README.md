@@ -34,3 +34,4 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 
 ### 2020 Jan:
 - Deep Q-learning from Demonstrations [note](Jan-2020/1)
+- Deep Reinforcement Learning with Double Q-Learning [note](Jan-2020/2)
