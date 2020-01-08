@@ -36,3 +36,4 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Deep Q-learning from Demonstrations [note](Jan-2020/1.md)
 - Deep Reinforcement Learning with Double Q-Learning [note](Jan-2020/2.md)
 - Dueling Network Architectures for Deep Reinforcement Learning [note](Jan-2020/3.md)
+- Learning Latent Plans from Play [note](Jan-2020/4.md)
