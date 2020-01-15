@@ -24,8 +24,8 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Self-supervised correspondence in visuomotor policy learning
 
 ### 2019 Nov:
-- Learning to Manipulate Object Collections Using Grounded State Representations (CoRL 2019) [note](/Nov-2019/1)
-- Teacher algorithms for curriculum learning of Deep RL in continuously parameterized environments (CoRL 2019) [note](/Nov-2019/2)
+- Learning to Manipulate Object Collections Using Grounded State Representations (CoRL 2019) [[note]](/Nov-2019/1)
+- Teacher algorithms for curriculum learning of Deep RL in continuously parameterized environments (CoRL 2019) [[note]](/Nov-2019/2)
 
 ### 2019 Dec:
 - Playing FPS Games with DRL [note](Dec-2019/1.md)
@@ -33,7 +33,7 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Deep Recurrent Q-Learning for POMDPs [note](Dec-2019/3.md)
 
 ### 2020 Jan:
-- Deep Q-learning from Demonstrations [note](Jan-2020/1.md)
-- Deep Reinforcement Learning with Double Q-Learning [note](Jan-2020/2.md)
-- Dueling Network Architectures for Deep Reinforcement Learning [note](Jan-2020/3.md)
-- Learning Latent Plans from Play [note](Jan-2020/4.md)
+- Deep Q-learning from Demonstrations [[note]](Jan-2020/1.md) [[paper]](https://arxiv.org/abs/1704.03732)
+- Deep Reinforcement Learning with Double Q-Learning [[note]](Jan-2020/2.md) [paper](https://arxiv.org/abs/1509.06461)
+- Dueling Network Architectures for Deep Reinforcement Learning [[note]](Jan-2020/3.md) [[paper]](https://arxiv.org/abs/1511.06581)
+- Learning Latent Plans from Play [[note]](Jan-2020/4.md) [[paper]](https://arxiv.org/abs/1903.01973) [[project-site]](https://learning-from-play.github.io/)
