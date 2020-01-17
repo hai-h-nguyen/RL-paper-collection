@@ -36,4 +36,5 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Deep Q-learning from Demonstrations [[note]](Jan-2020/1.md) [[paper]](https://arxiv.org/abs/1704.03732)
 - Deep Reinforcement Learning with Double Q-Learning [[note]](Jan-2020/2.md) [paper](https://arxiv.org/abs/1509.06461)
 - Dueling Network Architectures for Deep Reinforcement Learning [[note]](Jan-2020/3.md) [[paper]](https://arxiv.org/abs/1511.06581)
-- Learning Latent Plans from Play [[note]](Jan-2020/4.md) [[paper]](https://arxiv.org/abs/1903.01973) [[project-site]](https://learning-from-play.github.io/)
+- Learning Latent Plans from Play [[note]](Jan-2020/4.md) [[paper]](https://arxiv.org/abs/1903.01973) [[project-site]](https://learning-from-play.github.io/) CoRL2019
+- Time Limit in RL [[note]](Jan-2020/5.md) [[paper]](https://arxiv.org/abs/1712.00378) ICML 2018
