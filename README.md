@@ -38,3 +38,6 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Dueling Network Architectures for Deep Reinforcement Learning [[note]](Jan-2020/3.md) [[paper]](https://arxiv.org/abs/1511.06581)
 - Learning Latent Plans from Play [[note]](Jan-2020/4.md) [[paper]](https://arxiv.org/abs/1903.01973) [[project-site]](https://learning-from-play.github.io/) CoRL2019
 - Time Limit in RL [[note]](Jan-2020/5.md) [[paper]](https://arxiv.org/abs/1712.00378) ICML 2018
+- Multi-model imitation learning in partially observable environments [[note]](Jan-2020/6.md) AAMAS 2020 (extended abstract)
+- Learning belieft representations for imitation learning in pomdps [[note]](Jan-2020/7.md) UAI 2019
+- Learning deep policies for robot bin picking by simulating robust grasping sequences [[note]](Jan-2020/8.md) CORL 2017
