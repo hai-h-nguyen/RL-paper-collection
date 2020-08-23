@@ -41,3 +41,6 @@ Contain notes on paper on Reinforcement Learning that I read. Based on this list
 - Multi-model imitation learning in partially observable environments [[note]](Jan-2020/6.md) AAMAS 2020 (extended abstract)
 - Learning belieft representations for imitation learning in pomdps [[note]](Jan-2020/7.md) [[code]](https://github.com/tgangwani/BMIL) Alg: Belief-module imitation learning (BMIL), UAI 2019
 - Learning deep policies for robot bin picking by simulating robust grasping sequences [[note]](Jan-2020/8.md) CORL 2017
+
+### 2020 Aug:
+- Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks a.k.a Cycle GAN [[slide]](Aug-2020/cycleGAN.pdf)
